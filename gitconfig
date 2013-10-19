@@ -1,9 +1,9 @@
 [user]
-	email = esbensonne@gmail.com
-	name = Esben Sonne
+    email = esbensonne@gmail.com
+    name = Esben Sonne
 
 [core]
-	editor = vim
+    editor = vim
 
 [color]
     branch = always
