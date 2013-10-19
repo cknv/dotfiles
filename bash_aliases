@@ -6,8 +6,9 @@ alias lla='ls -la'
 
 # cd
 alias ..='cd ..'
-alias ...='cd ...'
+alias ...='cd ../..'
 alias ~='cd ~'
+alias -- -='cd -'
 
 # bash utils
 alias reread='source $HOME/.bashrc'
