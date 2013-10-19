@@ -8,6 +8,8 @@ shopt -s expand_aliases
 source ~/.bash_aliases
 
 function setprompt() {
+	# inspiration found at the arch linux wiki
+	# https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 	if [ -z != $1 ]; then
 		source ~/.bash_colors
 		
