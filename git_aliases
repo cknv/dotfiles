@@ -1,0 +1,25 @@
+[alias]
+    #st = status
+    s = status --short
+    dc = diff --cached
+    df = diff --word-diff
+    co = checkout
+    cp = cherry-pick
+    st = status
+    br = branch -a
+    lg = log --graph --pretty=medium --abbrev-commit --date=local
+    lgb = log --graph --pretty=medium --abbrev-commit --date=local --branches --all
+    lol = log --graph --oneline
+    lola = log --graph --oneline --all
+    l = log --graph --pretty=custom
+    la = log --graph --pretty=custom --all
+
+    # Show files ignored by git:
+    ign = ls-files -o -i --exclude-standard
+
+    # Show verbose output about tags, branches or remotes
+    tags = tag -l
+    branches = branch -a
+    remotes = remote -v
+
+    onto = !"git co -b __ONTOTMP; git co $1; git merge __ONTOTMP; git branch -d __ONTOTMP"
