@@ -12,6 +12,7 @@ function setprompt() {
 	# https://wiki.archlinux.org/index.php/Color_Bash_Prompt
 	if [ -z != $1 ]; then
 		source ~/.bash_colors
+		source /etc/bash_completion.d/git-prompt
 		
 		status="\$([[ \$? != 0 ]] && echo \" \[$BIRed\]x \")"
 		username="\[$IBlue\]\u"
@@ -30,10 +31,12 @@ function setprompt() {
 			displaypath="\[$Blue\]\W"
 		fi
 		
+		gitbranch='$(__git_ps1 "\[$Yellow\](%s)")'
+		
 		prompt="\[$IWhite\]\$"
 		resetcolor="\[$Color_Off\]"
-		
-		PS1="$status$base $displaypath $time\n$prompt$resetcolor "
+		# PS1='$(__git_ps1 "(%s)")${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\w\[\033[00m\] \$ '
+		PS1="$gitbranch$status$base $displaypath $time\n$prompt$resetcolor "
 		return 0
 	else
 		echo "invalid option"
