@@ -45,4 +45,5 @@ function setprompt() {
 	fi
 }
 
-short
+PROMPT_COMMAND=setprompt short
+
