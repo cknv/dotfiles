@@ -36,7 +36,7 @@ function setprompt() {
 		prompt="\[$IWhite\]\$"
 		resetcolor="\[$Color_Off\]"
 		# PS1='$(__git_ps1 "(%s)")${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]: \[\033[01;34m\]\w\[\033[00m\] \$ '
-		PS1="$gitbranch$status$base $displaypath $time\n$prompt$resetcolor "
+		PS1="$status$base $displaypath $time $gitbranch\n$prompt$resetcolor "
 		return 0
 	else
 		echo "invalid option"
