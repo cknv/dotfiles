@@ -15,6 +15,7 @@ alias reread='source $HOME/.bashrc'
 alias short='setprompt short'
 alias long='setprompt long'
 
+alias hist='history'
 # easy editing
 # alias vbashalias='vim $HOME/.bash_aliases'
 # alias vbashrc='vim $HOME/.bashrc'

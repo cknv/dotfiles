@@ -1,7 +1,8 @@
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-export HISTCONTROL=ignoredups
+HISTCONTROL=ignoredups
+HISTTIMEFORMAT="[%Y-%m-%d %H:%M:%S] "
 shopt -s histappend
 shopt -s expand_aliases
 
