@@ -12,8 +12,8 @@ alias -- -='cd -'
 
 # bash utils
 alias reread='source $HOME/.bashrc'
-alias short='setprompt short'
-alias long='setprompt long'
+alias short='short_path'
+alias long='long_path'
 
 alias hist='history'
 # easy editing
