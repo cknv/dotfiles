@@ -53,7 +53,7 @@ function set_git_branch {
 		# Set the final branch string.
 		gitbranch="${state}(${branch})${remote}${COLOR_NONE} "
 	else
-		gitbranch=''
+		gitbranch=""
 	fi
 }
 
@@ -71,12 +71,12 @@ function setbashprompt() {
 	# Set the status variable. We do this first so we don't lose the
 	# return value of the last command.
 	
-	status="\$([[ \$? != 0 ]] && echo \" \[$Red\]x \")"
+	status="\$([[ \$? != 0 ]] && echo \"$Red x \")"
 	
 	# set basic info
-	username="\[$IBlue\]\u"
-	host="\[$IRed\]\h"
-	time="\[$IBlack\]\t"
+	username="$IBlue\u"
+	host="$IRed\h"
+	time="$IBlack\t"
 	
 	# Set the PYTHON_VIRTUALENV variable.
 	set_virtualenv
@@ -85,25 +85,25 @@ function setbashprompt() {
 	set_git_branch
 	
 	if [[ $EUID == 0 ]]; then
-		base="\[$Red\]\h"
+		base="$Red\h"
 	else
-		base=$username$IWhite'@'$host
+		base=$username$IWhite@$host
 	fi
 	
 	# Set the bash prompt variable.
-	prompt="\[$IWhite\]\$"
-	resetcolor="\[$Color_Off\]"
+	prompt="$IWhite\$"
+	resetcolor="$Color_Off"
 	
 	# PS1="$status$base $displaypath $time $gitbranch\n$pvenv$prompt$resetcolor "
 	PS1="$status$base $displaypath $gitbranch$time\n$pvenv$prompt$resetcolor "
 }
 
 function short_path {
-	displaypath="\[$Blue\]\W"
+	displaypath="$Blue\W"
 }
 
 function long_path {
-	displaypath="\[$Blue\]\w"
+	displaypath="$Blue\w"
 }
 
 # set the default path to short
