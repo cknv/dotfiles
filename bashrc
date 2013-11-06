@@ -9,6 +9,7 @@ shopt -s expand_aliases
 
 source ~/.bash_aliases
 source ~/.bash_colors
+source ~/.bash_functions
 
 function is_git_repository {
 	git branch > /dev/null 2>&1
