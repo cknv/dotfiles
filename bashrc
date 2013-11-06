@@ -21,9 +21,9 @@ function set_git_branch {
 		git_status="$(git status 2> /dev/null)"
 
 		# Set color based on clean/staged/dirty.
-		if [[ ${git_status} =~ "working directory clean" ]]; then
+		if [[ $git_status =~ "working directory clean" ]]; then
 			state="$Green"
-		elif [[ ${git_status} =~ "Changes to be committed" ]]; then
+		elif [[ $git_status =~ "Changes to be committed" ]]; then
 			state="$Yellow"
 		else
 			state="$IRed"
@@ -31,7 +31,7 @@ function set_git_branch {
 
 		# Set arrow icon based on status against remote.
 		remote_pattern="# Your branch is (.*) of"
-		if [[ ${git_status} =~ ${remote_pattern} ]]; then
+		if [[ $git_status =~ $remote_pattern ]]; then
 			if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
 				remote="↑"
 			else
@@ -41,18 +41,18 @@ function set_git_branch {
 			remote=""
 		fi
 		diverge_pattern="# Your branch and (.*) have diverged"
-		if [[ ${git_status} =~ ${diverge_pattern} ]]; then
+		if [[ $git_status =~ $diverge_pattern ]]; then
 			remote="↕"
 		fi
 
 		# Get the name of the branch.
-		branch_pattern="^# On branch ([^${IFS}]*)"
-		if [[ ${git_status} =~ ${branch_pattern} ]]; then
+		branch_pattern="^# On branch ([^$IFS]*)"
+		if [[ $git_status =~ $branch_pattern ]]; then
 			branch=${BASH_REMATCH[1]}
 		fi
 
 		# Set the final branch string.
-		gitbranch="${state}(${branch})${remote}${COLOR_NONE} "
+		gitbranch="$state($branch)$remote "
 	else
 		gitbranch=""
 	fi
