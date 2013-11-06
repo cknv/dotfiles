@@ -97,8 +97,14 @@ function setbashprompt() {
 	prompt="$IWhite\$"
 	resetcolor="$Color_Off"
 
+	title $PWD
+
 	# PS1="$status$base $displaypath $time $gitbranch\n$pvenv$prompt$resetcolor "
 	PS1="$status$base $displaypath $gitbranch$time\n$pvenv$prompt$resetcolor "
+}
+
+function title() {
+	echo -ne "\033]2;terminal `basename $1`\007"
 }
 
 man() {
