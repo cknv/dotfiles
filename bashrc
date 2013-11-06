@@ -3,6 +3,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 HISTCONTROL=ignoredups
 HISTTIMEFORMAT="[%F %T] "
+HISTIGNORE="ls:la:ll:lla:bg:fg:history:hist:reread:long:short"
 shopt -s histappend
 shopt -s expand_aliases
 
