@@ -75,8 +75,11 @@ function set_virtualenv () {
 function setbashprompt() {
 	# Set the status variable. We do this first so we don't lose the
 	# return value of the last command.
-	
-	status="\$([[ \$? != 0 ]] && echo \"$Red x \")"
+	if [[ $? != 0 ]]; then
+		status="$Red x "
+	else
+		status=""
+	fi
 	
 	# set basic info
 	username="$IBlue\u"
