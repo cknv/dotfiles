@@ -75,8 +75,8 @@ function setbashprompt() {
 	fi
 
 	# set basic info
-	username="$IBlue\u"
-	host="$IRed\h"
+	username="$DGreen\u"
+	host="$Red\h"
 	time="$IBlack\t"
 
 	# Set the PYTHON_VIRTUALENV variable.
@@ -88,7 +88,7 @@ function setbashprompt() {
 	if [[ $EUID == 0 ]]; then
 		base="$Red\h"
 	else
-		base=$username$IWhite@$host
+		base=$username$White@$host
 	fi
 
 	# Set the bash prompt variable.
