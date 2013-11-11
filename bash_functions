@@ -39,7 +39,6 @@ function set_git_branch {
 		fi
 		diverge_pattern="# Your branch and (.*) have diverged"
 		if [[ $git_status =~ $diverge_pattern ]]; then
-			# remote="↕"
 			remote=" ??"
 		fi
 
