@@ -11,6 +11,16 @@ Purple='\[\e[0;35m\]'       # Purple
 Cyan='\[\e[0;36m\]'         # Cyan
 White='\[\e[0;37m\]'        # White
 
+# Dimmed
+DBlack='\[\e[2;30m\]'        # Black
+DRed='\[\e[2;31m\]'          # Red
+DGreen='\[\e[2;32m\]'        # Green
+DYellow='\[\e[2;33m\]'       # Yellow
+DBlue='\[\e[2;34m\]'         # Blue
+DPurple='\[\e[2;35m\]'       # Purple
+DCyan='\[\e[2;36m\]'         # Cyan
+DWhite='\[\e[2;37m\]'        # White
+
 # Bold
 BBlack='\[\e[1;30m\]'       # Black
 BRed='\[\e[1;31m\]'         # Red
