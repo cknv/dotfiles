@@ -27,7 +27,7 @@ function set_git_branch {
 		fi
 
 		# Set arrow icon based on status against remote.
-		remote_pattern="# Your branch is (ahead|behind) of|by"
+		remote_pattern="# Your branch is (ahead|behind) "
 		if [[ $git_status =~ $remote_pattern ]]; then
 			if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
 				remote=" >>"
@@ -39,9 +39,9 @@ function set_git_branch {
 		fi
 		
 		# Set the number of commits your branch is behind or ahead.
-		commits_pattern="([0-9]+) commits."
+		commits_pattern="([0-9]+) (commit|commits)"
 		if [[ $git_status =~ $commits_pattern ]]; then
-			remote="${remote} ${BASH_REMATCH[1]} commits"
+			remote="${remote} ${BASH_REMATCH[1]} ${BASH_REMATCH[2]}"
 		fi
 		
 		diverge_pattern="# Your branch and (.*) have diverged"
