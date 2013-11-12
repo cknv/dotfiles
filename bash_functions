@@ -18,20 +18,20 @@ function set_git_branch {
 		git_status="$(git status 2> /dev/null)"
 
 		# Set color based on clean/staged/dirty.
-		if [[ $git_status =~ "working directory clean" ]]; then
+		if [[ $git_status == *"working directory clean"* ]]; then
 			state="$Green"
-		elif [[ $git_status =~ "Changes to be committed" ]]; then
+		elif [[ $git_status == *"Changes to be committed"* ]]; then
 			state="$Yellow"
 		else
 			state="$IRed"
 		fi
 
 		# Set arrow icon based on status against remote.
-		remote_pattern="# Your branch is (.*) (by|of)"
+		remote_pattern="# Your branch is (ahead|behind) of|by"
 		if [[ $git_status =~ $remote_pattern ]]; then
-			if [[ ${BASH_REMATCH[1]} == *"ahead"* ]]; then
+			if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
 				remote=" >>"
-			elif [[ ${BASH_REMATCH[1]} == *"behind"* ]]; then
+			elif [[ ${BASH_REMATCH[1]} == "behind" ]]; then
 				remote=" <<"
 			fi
 		else
@@ -78,10 +78,10 @@ function setbashprompt() {
 	host="$Red\h"
 	time="$IBlack\t"
 
-	# Set the PYTHON_VIRTUALENV variable.
+	# Set the pvenv variable.
 	set_virtualenv
 
-	# Set the BRANCH variable.
+	# Set the branch variable.
 	set_git_branch
 
 	if [[ $EUID == 0 ]]; then
@@ -96,7 +96,6 @@ function setbashprompt() {
 
 	title $PWD
 
-	# PS1="$status$base $displaypath $time $gitbranch\n$pvenv$prompt$resetcolor "
 	PS1="$status$base $displaypath $gitbranch$time\n$pvenv$prompt$resetcolor "
 }
 
