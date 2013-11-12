@@ -37,6 +37,13 @@ function set_git_branch {
 		else
 			remote=""
 		fi
+		
+		# Set the number of commits your branch is behind or ahead.
+		commits_pattern="([0-9]+) commits."
+		if [[ $git_status =~ $commits_pattern ]]; then
+			remote="${remote} ${BASH_REMATCH[1]} commits"
+		fi
+		
 		diverge_pattern="# Your branch and (.*) have diverged"
 		if [[ $git_status =~ $diverge_pattern ]]; then
 			remote=" ??"
