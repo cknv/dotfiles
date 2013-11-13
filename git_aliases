@@ -1,5 +1,5 @@
 [alias]
-    #st = status
+    fe = fetch
     s = status --short
     dc = diff --cached
     df = diff --word-diff
