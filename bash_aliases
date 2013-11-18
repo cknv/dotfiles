@@ -15,10 +15,8 @@ alias reread='source $HOME/.bashrc'
 alias short='short_path'
 alias long='long_path'
 
+# easy and consise history
 alias hist='history 10'
-# easy editing
-# alias vbashalias='vim $HOME/.bash_aliases'
-# alias vbashrc='vim $HOME/.bashrc'
 
 # no python cache files
 alias python='python -B'
