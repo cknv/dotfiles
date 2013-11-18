@@ -22,3 +22,6 @@ alias hist='history 10'
 
 # no python cache files
 alias python='python -B'
+
+# smarter tailing
+alias tail='tail -f'
