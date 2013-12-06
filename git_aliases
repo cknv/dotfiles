@@ -4,6 +4,7 @@
     dc = diff --cached
     df = diff --word-diff
     co = checkout
+	cob = checkout -b
     cp = cherry-pick
     st = status
     br = branch -a
