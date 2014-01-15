@@ -3,6 +3,7 @@
     s = status --short
     dc = diff --cached
     df = diff --word-diff
+    master = checkout master
     co = checkout
     co- = checkout -
     cob = checkout -b
