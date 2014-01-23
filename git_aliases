@@ -4,6 +4,7 @@
     dc = diff --cached
     df = diff --word-diff
     master = checkout master
+    mom = merge origin/master
     co = checkout
     co- = checkout -
     cob = checkout -b
