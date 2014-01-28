@@ -11,6 +11,7 @@
     cp = cherry-pick
     st = status
     br = branch -a
+    prune = remote prune origin
     lg = log --graph --pretty=medium --abbrev-commit --date=local
     lgb = log --graph --pretty=medium --abbrev-commit --date=local --branches --all
     lol = log --graph --oneline
