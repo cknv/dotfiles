@@ -18,10 +18,6 @@
 [apply]
     whitespace = fix
 
-[branch]
-    autosetupmerge =  true
-    #autosetuprebase = always
-
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
     log = true
