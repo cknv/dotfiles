@@ -63,6 +63,11 @@ function display_git() {
         elif [[ ${match[1]} == "behind" ]]; then
             remote=" <<"
         fi
+
+        commits_pattern="([0-9]+) (commit|commits)"
+        if [[ ${git_status} =~ ${commits_pattern} ]]; then
+            remote="${remote} ${match[1]} ${match[2]}"
+        fi
     elif [[ ${git_status} =~ ${diverge_pattern} ]]; then
         remote=" ??"
     else 
