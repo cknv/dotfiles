@@ -15,3 +15,4 @@ ln -sf $PWD/git_aliases $HOME/.git_aliases
 ln -sf $PWD/abcde.conf $HOME/.abcde.conf
 
 ln -sf $PWD/zshrc $HOME/.zshrc
+ln -sf $PWD/shell_aliases $HOME/.shell_aliases

@@ -7,6 +7,7 @@ setopt PROMPT_SUBST
 autoload -U colors && colors
 
 alias reread='source $HOME/.zshrc'
+source ~/.shell_aliases
 
 path_length=1
 
