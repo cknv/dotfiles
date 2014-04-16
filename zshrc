@@ -58,7 +58,6 @@ function display_git() {
     remote_pattern="# Your branch is (ahead|behind)"
     diverge_pattern="# Your branch and (.*) have diverged"
     if [[ ${git_status} =~ ${remote_pattern} ]]; then
-        echo ${match}
         if [[ ${match[1]} == "ahead" ]]; then
             remote=" >>"
         elif [[ ${match[1]} == "behind" ]]; then
