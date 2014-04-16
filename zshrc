@@ -46,6 +46,7 @@ function display_git() {
         branch=${match[1]}
     fi
 
+    # Set the status color based on how clean the working directory is.
     if [[ ${git_status} =~ "working directory clean" ]]; then
         state="$fg[green]"
     elif [[ $git_status =~ "Changes to be committed" ]]; then
@@ -64,6 +65,7 @@ function display_git() {
             remote=" <<"
         fi
 
+        # Set the number of commits we are behind ahead while we are at it.
         commits_pattern="([0-9]+) (commit|commits)"
         if [[ ${git_status} =~ ${commits_pattern} ]]; then
             remote="${remote} ${match[1]} ${match[2]}"
@@ -74,16 +76,11 @@ function display_git() {
         remote=""
     fi
 
-    diverge_pattern="# Your branch and (.*) have diverged"
-    if [[ ${git_status} =~ ${diverge_pattern} ]]; then
-        remote=" ??"
-    fi
-
     echo " $state($branch)$remote$reset_color"
 }
 
 function virtualenv_info() {
-    [ $VIRTUAL_ENV ] && echo "%{$fg[yellow]%}[`basename $VIRTUAL_ENV`]%{$reset_color%}"
+    [ $VIRTUAL_ENV ] && echo "%{$fg[yellow]%}[`basename $VIRTUAL_ENV`]%{$reset_color%} "
  }
 
-PS1=$'$(base_prompt)$(display_path)$(display_git)$(display_time)\n$(virtualenv_info) > '
+PS1=$'$(base_prompt)$(display_path)$(display_git)$(display_time)\n$(virtualenv_info)> '
