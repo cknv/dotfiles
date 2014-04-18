@@ -89,4 +89,4 @@ path_length=1
 #     [ $VIRTUAL_ENV ] && echo "%{$fg[yellow]%}[`basename $VIRTUAL_ENV`]%{$reset_color%} "
 #  }
 
-PS1=$'$(base_prompt)$(display_path)$(display_git)$(display_time)\n$(virtualenv_info)> '
+PROMPT=$'$(base_prompt)$(display_path)$(display_git)$(display_time)\n$(virtualenv_info)> '
