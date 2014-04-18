@@ -10,9 +10,9 @@ alias ...='cd ../..'
 alias ~='cd ~'
 alias -- -='cd -'
 
-# bash utils
-alias short='short_path'
-alias long='long_path'
+# shell utils
+alias short='path_len 1'
+alias long='path_len 0'
 
 # easy and consise history
 alias hist='history 10'
