@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 set -x
 
 ln -sf $PWD/bashrc $HOME/.bashrc
