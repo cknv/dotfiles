@@ -6,14 +6,12 @@
     editor = vim
 
 [color]
-    branch = always
-    diff = always
-    grep = always
-    interactive = always
-    pager = true
-    showbranch = always
-    status = always
-    ui = always
+    ui = auto
+
+#[color "status"]
+#    added = green
+#    modified = yellow
+#    untracked = cyan
 
 [apply]
     whitespace = fix
