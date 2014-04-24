@@ -70,3 +70,7 @@ function display_git() {
 function virtualenv_info() {
     [ $VIRTUAL_ENV ] && echo "%{$fg[yellow]%}[`basename $VIRTUAL_ENV`]%{$reset_color%} "
  }
+
+function precmd() {
+    print -Pn '\e]2;%$path_length~\a'
+}
