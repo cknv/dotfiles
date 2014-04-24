@@ -1,8 +1,8 @@
 # History control.
-setopt append_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-HISTIGNORE="ls:reread:short:long:pwd"
+setopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+# HISTIGNORE="ls:reread:short:long:pwd:git s:git diff:git l*"
 
 # Python specifics.
 export PYTHONDONTWRITEBYTECODE=1
