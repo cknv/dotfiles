@@ -8,11 +8,6 @@
 [color]
     ui = auto
 
-#[color "status"]
-#    added = green
-#    modified = yellow
-#    untracked = cyan
-
 [apply]
     whitespace = fix
 
