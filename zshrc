@@ -8,13 +8,21 @@ setopt HIST_EXPIRE_DUPS_FIRST
 export PYTHONDONTWRITEBYTECODE=1
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-source /usr/local/bin/virtualenvwrapper.sh
+
+# Source venv
+source /usr/bin/virtualenvwrapper.sh 2> /dev/null
+# And if we aren't on arch.
+source /usr/local/bin/virtualenvwrapper.sh 2> /dev/null
 
 # Prompt expansion is needed.
 setopt PROMPT_SUBST
 
 # Gief colors!
 autoload -U colors && colors
+
+# Completion is nice too.
+autoload -U compinit
+compinit
 
 alias reread='source $HOME/.zshrc'
 source ~/.shell_aliases
