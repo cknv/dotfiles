@@ -15,7 +15,7 @@ alias short='path_len 1'
 alias long='path_len 0'
 
 # easy and consise history
-alias hist='history 10'
+alias hist='history -iD'
 
 # smarter tailing
 alias tail='tail -f'
