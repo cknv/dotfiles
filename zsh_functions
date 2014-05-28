@@ -71,6 +71,20 @@ function virtualenv_info() {
     [ $VIRTUAL_ENV ] && echo "%{$fg[yellow]%}[`basename $VIRTUAL_ENV`]%{$reset_color%} "
  }
 
+function command_runtime() {
+    if [ $timer_show ] && [ $timer_show -gt 0 ]; then
+        echo "%{$fg[black]%} ${timer_show}s%{$reset_color%}"
+    fi
+}
+
+function preexec() {
+    timer=${timer:-$SECONDS}
+}
+
 function precmd() {
     print -Pn '\e]2;%$path_length~\a'
+    if [ $timer ]; then
+        timer_show=$(($SECONDS - $timer))
+        unset timer
+    fi
 }
