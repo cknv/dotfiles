@@ -73,7 +73,7 @@ function virtualenv_info() {
 
 function command_runtime() {
     if [ $timer_show ] && [ $timer_show -gt 0 ]; then
-        echo "%{$fg_bold[black]%} ${timer_show}s%{$reset_color%}"
+        echo "%{$fg[black]%} ${timer_show}s%{$reset_color%}"
     fi
 }
 
