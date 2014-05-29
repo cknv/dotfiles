@@ -14,6 +14,9 @@ source /usr/bin/virtualenvwrapper.sh 2> /dev/null
 # And if we aren't on arch.
 source /usr/local/bin/virtualenvwrapper.sh 2> /dev/null
 
+# Export defaults
+export EDITOR=$(which vim)
+
 # Prompt expansion is needed.
 setopt PROMPT_SUBST
 
