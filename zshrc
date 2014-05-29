@@ -15,7 +15,8 @@ source /usr/bin/virtualenvwrapper.sh 2> /dev/null
 source /usr/local/bin/virtualenvwrapper.sh 2> /dev/null
 
 # Export defaults
-export EDITOR=$(which vim)
+export EDITOR=$(which nano)
+export VISUAL=$(which vim)
 
 # Prompt expansion is needed.
 setopt PROMPT_SUBST
