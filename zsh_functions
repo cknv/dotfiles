@@ -1,5 +1,7 @@
 function path_len() {
     path_length=$1
+    # Set the new path in the title.
+    chpwd
 }
 
 function display_path() {
@@ -81,8 +83,11 @@ function preexec() {
     timer=${timer:-$SECONDS}
 }
 
-function precmd() {
+function chpwd() {
     print -Pn '\e]2;%$path_length~\a'
+}
+
+function precmd() {
     if [ $timer ]; then
         timer_show=$(($SECONDS - $timer))
         unset timer

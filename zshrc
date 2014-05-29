@@ -75,5 +75,6 @@ source ~/.zsh_functions
 
 # Set the path display length default:
 path_length=1
+chpwd
 
 PROMPT=$'$(base_prompt)$(display_path)$(display_git)$(command_runtime)\n$(virtualenv_info)> '
