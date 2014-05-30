@@ -1,15 +1,11 @@
 function path_len() {
     path_length=$1
     # Set the new path in the title.
-    chpwd
+    default_title
 }
 
 function display_path() {
     echo " %{$fg[blue]%}%$path_length~%{$reset_color%}"
-}
-
-function display_time() {
-    echo " %{$fg[black]%}%*%{$reset_color%}"
 }
 
 function base_prompt() {
@@ -83,13 +79,13 @@ function preexec() {
     timer=${timer:-$SECONDS}
 }
 
-function chpwd() {
-    print -Pn '\e]2;%$path_length~\a'
-}
-
 function precmd() {
     if [ $timer ]; then
         timer_show=$(($SECONDS - $timer))
         unset timer
     fi
+}
+
+function default_title() {
+    print -Pn '\e]2;%$path_length~\a'
 }
