@@ -25,8 +25,9 @@ setopt PROMPT_SUBST
 autoload -U colors && colors
 
 # Completion is nice too.
-autoload -U compinit
-compinit
+autoload -U compinit && compinit
+setopt complete_in_word
+setopt correct
 
 alias reread='source $HOME/.zshrc'
 source ~/.shell_aliases
@@ -34,6 +35,6 @@ source ~/.zsh_functions
 
 # Set the path display length default:
 path_length=1
-chpwd
+default_title
 
 PROMPT=$'$(base_prompt)$(display_path)$(display_git)$(command_runtime)\n$(virtualenv_info)> '
