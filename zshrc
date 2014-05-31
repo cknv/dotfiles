@@ -37,4 +37,4 @@ source ~/.zsh_functions
 path_length=1
 default_title
 
-PROMPT=$'$(base_prompt)$(display_path)$(display_git)$(command_runtime)\n$(virtualenv_info)> '
+PROMPT=$'$(return_status)$(base_prompt)$(display_path)$(display_git)$(command_runtime)\n$(virtualenv_info)> '
