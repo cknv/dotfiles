@@ -21,7 +21,6 @@ function base_prompt() {
 }
 
 function display_git() {
-    
     # Check if we are actually in a git repo.
     if [ -d .git ]; then
         # Capture the output of the "git status" command.
@@ -80,6 +79,7 @@ function preexec() {
 }
 
 function precmd() {
+    default_title
     if [ $timer ]; then
         timer_show=$(($SECONDS - $timer))
         unset timer
