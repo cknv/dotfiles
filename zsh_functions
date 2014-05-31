@@ -8,16 +8,16 @@ function display_path() {
     echo " %{$fg[blue]%}%$path_length~%{$reset_color%}"
 }
 
-function base_prompt() {
-    if [ $? -eq 0 ]; then
-        local display_status=""
-    else
-        local display_status="%{$fg[red]%} x %{$reset_color%}"
+function return_status() {
+    if [ $? -ne 0 ]; then
+        echo "%{$fg[red]%} x %{$reset_color%}"
     fi
+}
 
+function base_prompt() {
     local display_user="%{$fg[green]%}%n%{$reset_color%}"
     local display_host="%{$fg[red]%}%M%{$reset_color%}"
-    echo "$display_status$display_user@$display_host"
+    echo "$display_user@$display_host"
 }
 
 function display_git() {
