@@ -8,6 +8,7 @@ setopt HIST_EXPIRE_DUPS_FIRST
 export PYTHONDONTWRITEBYTECODE=1
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PYTHONSTARTUP=~/.pythonrc.py
 
 # Source venv
 source /usr/bin/virtualenvwrapper.sh 2> /dev/null
