@@ -26,3 +26,5 @@
     tags = tag -l
     branches = branch -a
     remotes = remote -v
+
+	workrepo = config user.email "esben@falconsocial.com"
