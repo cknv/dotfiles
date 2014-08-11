@@ -6,6 +6,7 @@
     master = checkout master
     mom = merge origin/master
     rom = rebase origin/master
+    dom = diff origin/master
     co = checkout
     co- = checkout -
     cob = checkout -b
