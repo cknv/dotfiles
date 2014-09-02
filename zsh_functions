@@ -22,7 +22,7 @@ function base_prompt() {
 
 function display_git() {
     # Check if we are actually in a git repo.
-    if [ -d .git ]; then
+    if git rev-parse --git-dir > /dev/null 2>&1; then
         # Capture the output of the "git status" command.
         local git_status="$(git status 2> /dev/null)"
         branch_pattern="On branch ([^[:space:]]*)"
