@@ -21,3 +21,4 @@ ln -sf $PWD/shell_aliases $HOME/.shell_aliases
 
 ln -sf $PWD/pythonrc.py $HOME/.pythonrc.py
 
+ln -sf $PWD/editoconfig $HOME/.editorconfig
