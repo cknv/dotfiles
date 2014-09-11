@@ -3,6 +3,7 @@
     s = status --short
     dc = diff --cached
     df = diff --word-diff
+    ds = diff --stat
     master = checkout master
     mom = merge origin/master
     rom = rebase origin/master
