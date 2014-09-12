@@ -4,6 +4,7 @@
     dc = diff --cached
     df = diff --word-diff
     ds = diff --stat
+	dsc = diff --stat --cached
     master = checkout master
     mom = merge origin/master
     rom = rebase origin/master
