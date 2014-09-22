@@ -35,6 +35,10 @@ alias reread='source $HOME/.zshrc'
 source ~/.shell_aliases
 source ~/.zsh_functions
 
+# Get home and end working:
+bindkey "^[[H" beginning-of-line
+bindkey "^[[F" end-of-line
+
 # Set the path display length default:
 path_length=1
 default_title
