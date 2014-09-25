@@ -19,3 +19,6 @@ alias hist='history -iD'
 
 # smarter tailing
 alias tail='tail -f'
+
+# lazy git
+alias g='git'
