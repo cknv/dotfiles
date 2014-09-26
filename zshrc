@@ -44,3 +44,6 @@ path_length=1
 default_title
 
 PROMPT=$'$(return_status)$(base_prompt)$(display_path)$(display_git)$(command_runtime)\n$(virtualenv_info)> '
+
+# Open new tabs in the same directory:
+source /etc/profile.d/vte.sh
