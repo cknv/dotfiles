@@ -6,7 +6,7 @@
     ds = diff --stat
 	dsc = diff --stat --cached
     master = checkout master
-    mom = merge origin/master
+    m = merge
     rom = rebase origin/master
     dom = diff origin/master
     co = checkout
