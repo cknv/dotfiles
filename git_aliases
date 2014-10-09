@@ -4,13 +4,12 @@
     dc = diff --cached
     df = diff --word-diff
     ds = diff --stat
-	dsc = diff --stat --cached
+    dsc = diff --stat --cached
     master = checkout master
     me = merge
     rom = rebase origin/master
     dom = diff origin/master
     co = checkout
-    co- = checkout -
     cob = checkout -b
     cp = cherry-pick
     st = status
@@ -30,4 +29,4 @@
     branches = branch -a
     remotes = remote -v
 
-	workrepo = config user.email "esben@falconsocial.com"
+    workrepo = config user.email "esben@falconsocial.com"
