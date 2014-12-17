@@ -1,6 +1,7 @@
 [alias]
     fe = fetch
     s = status --short
+    dm = diff master..
     dc = diff --cached
     df = diff --word-diff
     ds = diff --stat
