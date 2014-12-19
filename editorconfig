@@ -5,22 +5,25 @@ charset = utf-8
 end_of_line = lf
 insert_final_newline = true
 trim_trailing_whitespace = true
+indent_style = space
 
 [*.py]
-indent_style = space
 indent_size = 4
 
 [*.rs]
-indent_style = space
 indent_size = 4
 
 [*.json]
-indent_style = space
 indent_size = 2
 
 [*.yaml]
-indent_style = space
 indent_size = 2
 
 [*.charset]
 insert_final_newline = false
+
+[*.css]
+indent_size = 2
+
+[*.html]
+indent_size = 2
