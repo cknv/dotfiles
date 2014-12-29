@@ -20,6 +20,9 @@ source /usr/local/bin/virtualenvwrapper.sh 2> /dev/null
 export EDITOR=$(which nano)
 export VISUAL=$(which vim)
 
+# Export config folder
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # Prompt expansion is needed.
 setopt PROMPT_SUBST
 
