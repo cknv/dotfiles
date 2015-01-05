@@ -31,6 +31,6 @@
     remotes = remote -v
 
     # Prune branches
-    prune = remote prune origin --dry-run
+    prune = fetch --prune
 
     workrepo = config user.email "esben@falconsocial.com"
