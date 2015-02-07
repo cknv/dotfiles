@@ -27,3 +27,6 @@ indent_size = 2
 
 [*.html]
 indent_size = 2
+
+[.txt]
+indent_size = 2
