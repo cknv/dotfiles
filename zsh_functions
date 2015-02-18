@@ -35,6 +35,8 @@ function display_git() {
             state="$fg[green]"
         elif [[ $git_status =~ "Changes to be committed" ]]; then
             state="$fg[yellow]"
+        elif [[ $git_status =~ "Initial commit" ]]; then
+            state="$fg[white]"
         else
             state="$fg[red]"
         fi
