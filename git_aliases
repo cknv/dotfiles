@@ -1,11 +1,13 @@
 [alias]
     fe = fetch
     s = status --short
-    dm = diff master..
-    dc = diff --cached
-    df = diff --word-diff
+    d = diff
     ds = diff --stat
-    dsc = diff --stat --cached
+    df = diff --word-diff
+    dm = diff master
+    dms = diff master --stat
+    dc = diff --cached
+    dcs = diff --cached --stat
     master = checkout master
     me = merge
     rom = rebase origin/master
