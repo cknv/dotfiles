@@ -4,7 +4,7 @@
     s = status --short
     d = diff
     ds = diff --stat
-    df = diff --word-diff
+    dw = diff --word-diff
     dm = diff master
     dms = diff master --stat
     dc = diff --cached
