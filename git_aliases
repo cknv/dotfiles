@@ -1,5 +1,6 @@
 [alias]
     amend = commit --amend
+    ap = add --patch
     fe = fetch
     s = status --short
     d = diff
