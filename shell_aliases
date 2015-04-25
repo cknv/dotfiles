@@ -22,3 +22,6 @@ alias tail='tail -f'
 
 # lazy git
 alias g='git'
+
+# json prettifier
+alias json='python -m json.tool'
