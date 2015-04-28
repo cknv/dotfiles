@@ -18,7 +18,7 @@
     defaultToUpstream = true
 
 [mergetool "sublime"]
-    cmd = subl -w $MERGED
+    cmd = subl3 -w $MERGED
     trustExitCode = false
 
 [push]
