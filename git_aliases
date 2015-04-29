@@ -1,4 +1,5 @@
 [alias]
+    comit = commit
     amend = commit --amend
     ap = add --patch
     fe = fetch
