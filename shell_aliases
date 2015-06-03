@@ -25,3 +25,5 @@ alias g='git'
 
 # json prettifier
 alias json='python -m json.tool'
+
+alias rmorig='rm **/*.orig'
