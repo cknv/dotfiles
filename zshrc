@@ -67,3 +67,6 @@ source /etc/profile.d/vte.sh
 
 # Forward searching with Ctrl+s
 stty -ixon
+
+# ZSH syntax hightlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
