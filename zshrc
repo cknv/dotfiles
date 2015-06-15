@@ -64,3 +64,6 @@ PROMPT=$'$(return_status)$(base_prompt)$(display_path)$(display_git)$(command_ru
 
 # Open new tabs in the same directory:
 source /etc/profile.d/vte.sh
+
+# Forward searching with Ctrl+s
+stty -ixon
