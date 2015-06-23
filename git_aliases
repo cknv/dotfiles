@@ -13,6 +13,7 @@
     dcs = diff --cached --stat
     master = checkout master
     me = merge
+    mt = mergetool
     rom = rebase origin/master
     dom = diff origin/master
     co = checkout
