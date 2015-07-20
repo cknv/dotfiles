@@ -20,6 +20,7 @@
     cob = checkout -b
     cp = cherry-pick
     st = status
+    unstage = rm --cached
     br = branch --all -vv
     lg = log --graph --pretty=medium --abbrev-commit --date=local
     lgb = log --graph --pretty=medium --abbrev-commit --date=local --branches --all
