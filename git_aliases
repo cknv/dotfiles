@@ -15,6 +15,7 @@
     me = merge
     mt = mergetool
     rom = rebase origin/master
+    rc = rebase --continue
     dom = diff origin/master
     co = checkout
     cob = checkout -b
