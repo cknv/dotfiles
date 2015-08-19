@@ -36,3 +36,6 @@
 # Include ~/.git_aliases
 [include]
     path = ~/.git_aliases
+
+[diff]
+    algorithm = patience
