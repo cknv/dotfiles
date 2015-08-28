@@ -25,7 +25,7 @@ function display_git() {
     if git rev-parse --git-dir > /dev/null 2>&1; then
         # Capture the output of the "git status" command.
         local git_status="$(git status 2> /dev/null)"
-        branch_pattern="On branch ([^[:space:]]*)"
+        local branch_pattern="On branch ([^[:space:]]*)"
         if [[ ${git_status} =~ ${branch_pattern} ]]; then
             branch=${match[1]}
         fi
@@ -42,8 +42,8 @@ function display_git() {
         fi
 
         # Set arrow icon based on status against remote.
-        remote_pattern="Your branch is (ahead|behind)"
-        diverge_pattern="Your branch and (.*) have diverged"
+        local remote_pattern="Your branch is (ahead|behind)"
+        local diverge_pattern="Your branch and (.*) have diverged"
         if [[ ${git_status} =~ ${remote_pattern} ]]; then
             if [[ ${match[1]} == "ahead" ]]; then
                 remote=" >>"
@@ -52,7 +52,7 @@ function display_git() {
             fi
 
             # Set the number of commits we are behind ahead while we are at it.
-            commits_pattern="([0-9]+) (commit|commits)"
+            local commits_pattern="([0-9]+) (commit|commits)"
             if [[ ${git_status} =~ ${commits_pattern} ]]; then
                 remote="${remote} ${match[1]} ${match[2]}"
             fi
