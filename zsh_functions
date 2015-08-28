@@ -62,7 +62,20 @@ function display_git() {
             remote=""
         fi
 
-        echo " $state($branch)$remote$reset_color"
+        local git_objects="$(git count-objects 2> /dev/null)"
+        local objects_pattern="([0-9]+)"
+        if [[ ${git_objects} =~ ${objects_pattern} ]]; then
+            object_count="${match[1]}"
+            if [ ${object_count} -le 1000 ]; then
+                object_count=""
+            else
+                object_count=" ${object_count} objects"
+            fi
+        else
+            object_count=""
+        fi
+
+        echo " $state($branch)$remote$reset_color$object_count"
     fi
 }
 
