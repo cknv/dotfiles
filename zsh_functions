@@ -69,13 +69,13 @@ function display_git() {
             if [ ${object_count} -le 1000 ]; then
                 object_count=""
             else
-                object_count=" ${object_count} objects"
+                object_count=" $fg[cyan]${object_count} objects"
             fi
         else
             object_count=""
         fi
 
-        echo " $state($branch)$remote$reset_color$object_count"
+        echo " $state($branch)$remote$object_count$reset_color"
     fi
 }
 
