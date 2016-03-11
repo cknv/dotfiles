@@ -4,12 +4,30 @@
 
 [core]
     editor = vim
+    whitespace = tab-in-indent,trailing-space,cr-at-eol
 
 [color]
     ui = auto
+[color "branch"]
+    current = yellow bold
+    local = green
+    remote = cyan
+    upstream = blue
+[color "diff"]
+    context = white
+    meta = yellow
+    commit = green
+    frag = magenta
+    old = red
+    new = green
+    whitespace = red reverse
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
 
 [apply]
-    whitespace = fix
+    whitespace = error
 
 [merge]
     # Include summaries of merged commits in newly created merge commit messages
