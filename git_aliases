@@ -5,6 +5,7 @@
     fe = fetch
     s = status --short
     d = diff
+    check = diff --check
     ds = diff --stat
     dw = diff --word-diff
     dm = diff master
