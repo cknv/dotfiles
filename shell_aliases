@@ -10,6 +10,9 @@ alias ...='cd ../..'
 alias ~='cd ~'
 alias -- -='cd -'
 
+# it confuses me that nautilus is also called files
+alias files='nautilus . > /dev/null 2> /dev/null &'
+
 # shell utils
 alias short='path_len 1'
 alias long='path_len 0'
