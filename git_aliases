@@ -42,4 +42,4 @@
     # Prune branches
     prune = fetch --prune
 
-    workrepo = config user.email "esben@falconsocial.com"
+    workrepo = config user.email "esben@falcon.io"
