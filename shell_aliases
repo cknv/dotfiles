@@ -13,6 +13,9 @@ alias -- -='cd -'
 # it confuses me that nautilus is also called files
 alias files='nautilus . > /dev/null 2> /dev/null &'
 
+# docker-compose is getting annoying to type
+alias dc='docker-compose'
+
 # shell utils
 alias short='path_len 1'
 alias long='path_len 0'
