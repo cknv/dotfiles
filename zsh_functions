@@ -31,7 +31,7 @@ function display_git() {
         fi
 
         # Set the status color based on how clean the working directory is.
-        if [[ ${git_status} =~ "working directory clean" ]]; then
+        if [[ ${git_status} =~ "working tree clean" ]]; then
             state="$fg[green]"
         elif [[ $git_status =~ "Changes to be committed" ]]; then
             state="$fg[yellow]"
