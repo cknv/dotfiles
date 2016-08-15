@@ -16,6 +16,9 @@ alias files='nautilus . > /dev/null 2> /dev/null &'
 # docker-compose is getting annoying to type
 alias dc='docker-compose'
 
+# pre-commit too
+alias pc='pre-commit'
+
 # shell utils
 alias short='path_len 1'
 alias long='path_len 0'
