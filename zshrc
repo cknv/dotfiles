@@ -70,3 +70,8 @@ stty -ixon
 
 # ZSH syntax hightlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Source the secrets file in home if it exists.
+if [ -r $HOME/.secrets ]; then
+    source $HOME/.secrets
+fi
