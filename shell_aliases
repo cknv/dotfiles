@@ -1,3 +1,5 @@
+alias sudo='sudo '
+
 # ls
 alias ls='ls --color=always -h -F'
 alias la='ls -a'
@@ -38,3 +40,5 @@ alias json='python -m json.tool'
 alias rmorig='rm **/*.orig'
 
 alias docker-clean='docker stop $(docker ps --quiet) && docker rm $(docker ps --all --quiet) && docker rmi $(docker images --quiet)'
+
+alias mirrorlist='reflector --verbose -l 5 --sort rate --sort score --sort age --save /etc/pacman.d/mirrorlist'
