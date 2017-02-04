@@ -36,3 +36,5 @@ alias g='git'
 alias json='python -m json.tool'
 
 alias rmorig='rm **/*.orig'
+
+alias docker-clean='docker stop $(docker ps --quiet) && docker rm $(docker ps --all --quiet) && docker rmi $(docker images --quiet)'
