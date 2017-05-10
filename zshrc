@@ -46,6 +46,7 @@ bindkey "^[[F" end-of-line # end
 bindkey "^[[5~" up-line-or-history # page up
 bindkey "^[[6~" down-line-or-history # page down
 bindkey "^[[2~" overwrite-mode # insert
+bindkey "^[[3~" delete-char # delete
 
 # Set the path display length default:
 path_length=1
