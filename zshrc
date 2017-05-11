@@ -47,6 +47,8 @@ bindkey "^[[5~" up-line-or-history # page up
 bindkey "^[[6~" down-line-or-history # page down
 bindkey "^[[2~" overwrite-mode # insert
 bindkey "^[[3~" delete-char # delete
+bindkey "^[[1;5D" backward-word # jump backwards
+bindkey "^[[1;5C" forward-word # jump forwards
 
 # Set the path display length default:
 path_length=1
