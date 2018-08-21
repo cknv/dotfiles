@@ -13,6 +13,7 @@
     dc = diff --cached
     dcs = diff --cached --stat
     dp = diff HEAD^ HEAD
+    dps = diff HEAD^ HEAD --stat
     master = checkout master
     me = merge
     mt = mergetool
