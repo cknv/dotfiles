@@ -15,6 +15,9 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 export PYTHONSTARTUP=~/.pythonrc.py
 eval "`pip completion --zsh`"
 
+# Go specifics
+export GOPATH=$HOME/.go
+
 # Source venv
 source /usr/bin/virtualenvwrapper.sh 2> /dev/null
 
