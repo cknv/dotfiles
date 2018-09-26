@@ -9,7 +9,7 @@ function display_path() {
 }
 
 function return_status() {
-    if [ $? -ne 0 ]; then
+    if (($? != 0)); then
         echo "%{$fg[red]%} x %{$reset_color%}"
     fi
 }
@@ -84,7 +84,7 @@ function virtualenv_info() {
 }
 
 function command_runtime() {
-    if [ $timer_show ] && [ $timer_show -gt 0 ]; then
+    if [ $timer_show ] && (($timer_show > 0)); then
         echo "%{$fg_bold[black]%} ${timer_show}s%{$reset_color%}"
     fi
 }
