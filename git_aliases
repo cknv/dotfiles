@@ -42,6 +42,6 @@
     remotes = remote -v
 
     # Prune branches
-    prune = fetch --prune
+    brp = fetch --prune
 
     workrepo = config user.email "esben@falcon.io"
