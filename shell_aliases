@@ -12,6 +12,9 @@ alias ...='cd ../..'
 alias ~='cd ~'
 alias -- -='cd -'
 
+# just makes parents by default too
+alias mkdir='mkdir --parents'
+
 # it confuses me that nautilus is also called files
 alias files='nautilus . > /dev/null 2> /dev/null &'
 
