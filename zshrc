@@ -17,6 +17,7 @@ eval "`pip completion --zsh`"
 
 # Go specifics
 export GOPATH=$HOME/.go
+export PATH=$PATH:$GOPATH/bin
 
 # Source venv
 source /usr/bin/virtualenvwrapper.sh 2> /dev/null
