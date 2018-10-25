@@ -19,6 +19,9 @@ eval "`pip completion --zsh`"
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOPATH/bin
 
+# Pkg folders
+export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+
 # Source venv
 source /usr/bin/virtualenvwrapper.sh 2> /dev/null
 
