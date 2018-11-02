@@ -21,6 +21,8 @@ export PATH=$PATH:$GOPATH/bin
 
 # Pkg folders
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/local/lib/pkgconfig
+# LD config
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # Source venv
 source /usr/bin/virtualenvwrapper.sh 2> /dev/null
