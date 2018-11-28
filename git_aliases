@@ -43,5 +43,3 @@
 
     # Prune branches
     brp = fetch --prune
-
-    workrepo = config user.email "esben@falcon.io"
