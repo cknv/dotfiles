@@ -16,6 +16,7 @@
     dps = diff HEAD^ HEAD --stat
     master = checkout master
     me = merge
+    mom = merge origin/master
     mt = mergetool
     rom = rebase origin/master
     rc = rebase --continue
