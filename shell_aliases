@@ -15,6 +15,9 @@ alias -- -='cd -'
 # just makes parents by default too
 alias mkdir='mkdir --parents'
 
+# ergonomic grep
+alias grep='grep --color --ignore-case'
+
 # it confuses me that nautilus is also called files
 alias files='nautilus . > /dev/null 2> /dev/null &'
 
