@@ -48,3 +48,6 @@ alias rmorig='rm **/*.orig'
 alias docker-clean='docker stop $(docker ps --quiet) && docker rm $(docker ps --all --quiet) && docker rmi $(docker images --quiet)'
 
 alias mirrorlist='reflector --verbose -l 10 --sort rate --sort score --sort age --protocol rsync --protocol http --protocol https --save /etc/pacman.d/mirrorlist'
+
+# encode and decode
+alias b64='base64'
