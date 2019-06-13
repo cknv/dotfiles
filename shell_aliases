@@ -21,11 +21,13 @@ alias grep='grep --color --ignore-case'
 # it confuses me that nautilus is also called files
 alias files='nautilus . > /dev/null 2> /dev/null &'
 
-# docker-compose is getting annoying to type
+# development aliases
 alias dc='docker-compose'
-
-# pre-commit too
 alias pc='pre-commit'
+alias g='git'
+alias b64='base64'
+alias f8='flake8'
+alias k='kubectl'
 
 # shell utils
 alias short='path_len 1'
@@ -37,9 +39,6 @@ alias hist='history -iD'
 # smarter tailing
 alias tail='tail -f'
 
-# lazy git
-alias g='git'
-
 # json prettifier
 alias json='python -m json.tool'
 
@@ -48,6 +47,3 @@ alias rmorig='rm **/*.orig'
 alias docker-clean='docker stop $(docker ps --quiet) && docker rm $(docker ps --all --quiet) && docker rmi $(docker images --quiet)'
 
 alias mirrorlist='reflector --verbose -l 10 --sort rate --sort score --sort age --protocol rsync --protocol http --protocol https --save /etc/pacman.d/mirrorlist'
-
-# encode and decode
-alias b64='base64'
