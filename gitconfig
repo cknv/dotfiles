@@ -38,6 +38,7 @@
 
 [push]
     default = tracking
+    followTags = true
 
 [fetch]
     recurseSubmodules = true
