@@ -84,9 +84,24 @@ function virtualenv_info() {
 }
 
 function command_runtime() {
-    if [ $timer_show ] && (($timer_show > 0)); then
-        echo "%{$fg_bold[black]%} ${timer_show}s%{$reset_color%}"
+    timer_remainder=$timer_show
+    display_time=""
+    hour=$((60*60))
+    minute=$((60))
+    if ((timer_remainder>=$hour)); then
+        hours_elapsed=$(echo $(($timer_remainder/$hour)))
+        timer_remainder=$(echo $(($timer_remainder%$hour)))
+        display_time="${display_time}${hours_elapsed}h"
     fi
+    if ((timer_remainder>=$minute)); then
+        minutes_elapsed=$(echo $(($timer_remainder/$minute)))
+        timer_remainder=$(echo $(($timer_remainder%$minute)))
+        display_time="${display_time}${minutes_elapsed}m"
+    fi
+    if ((timer_remainder>0)); then
+        display_time="${display_time}${timer_remainder}s"
+    fi
+    echo "%{$fg_bold[black]%} ${display_time}%{$reset_color%}"
 }
 
 function preexec() {
