@@ -23,6 +23,7 @@
     dom = diff origin/master
     co = checkout
     cob = checkout -b
+    cop = checkout --patch
     cp = cherry-pick
     st = status
     unstage = rm --cached
