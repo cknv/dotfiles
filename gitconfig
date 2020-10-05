@@ -2,6 +2,9 @@
     email = esbensonne@gmail.com
     name = Esben Sonne
 
+[includeIf "gitdir:~/oc/"]
+    path = ~/.git_work_config
+
 [core]
     editor = vim
     whitespace = trailing-space,cr-at-eol
