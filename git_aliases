@@ -46,3 +46,4 @@
 
     # Prune branches
     brp = fetch --prune
+    cleanup = !git branch --merged | grep -v \"\\*\\|master\\|main\" | xargs -n1 git branch --delete
