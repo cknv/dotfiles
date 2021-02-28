@@ -46,4 +46,4 @@ alias rmorig='rm **/*.orig'
 
 alias docker-clean='docker stop $(docker ps --quiet) && docker rm $(docker ps --all --quiet) && docker rmi $(docker images --quiet)'
 
-alias mirrorlist='reflector --verbose --latest 200 --country Denmark,Sweden,Germany,Norway,Netherlands --sort rate --sort score --sort age --protocol rsync,http,https --save /etc/pacman.d/mirrorlist'
+alias mirrorlist='reflector --protocol http,https --verbose --age 12 --latest 200 --country Denmark,Sweden,Germany,Norway,Netherlands --sort score --save /etc/pacman.d/mirrorlist'
