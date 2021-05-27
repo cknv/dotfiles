@@ -14,16 +14,24 @@
     dcs = diff --cached --stat
     dp = diff HEAD^ HEAD
     dps = diff HEAD^ HEAD --stat
-    master = checkout master
     me = merge
     mom = merge origin/master
     mt = mergetool
     rom = rebase origin/master
     rc = rebase --continue
     dom = diff origin/master
+
+    # Quick switch to main/master
+    master = switch --no-guess master
+    main = switch --no-guess main
+    # New style branch switching
+    sw = switch
+    swc = switch --create
+    # Old style branch switching
     co = checkout
     cob = checkout -b
     cop = checkout --patch
+
     cp = cherry-pick
     st = status
     unstage = rm --cached
