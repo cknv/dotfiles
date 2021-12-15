@@ -5,6 +5,7 @@ ln -sf $PWD/vimrc $HOME/.vimrc
 
 ln -sf $PWD/gitconfig $HOME/.gitconfig
 ln -sf $PWD/git_aliases $HOME/.git_aliases
+ln -sf $PWD/git_ignore $HOME/.gitignore
 ln -sf $PWD/git_work_config $HOME/.git_work_config
 
 ln -sf $PWD/abcde.conf $HOME/.abcde.conf
