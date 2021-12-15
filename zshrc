@@ -63,7 +63,7 @@ bindkey "^[[1;5C" forward-word # jump forwards
 path_length=1
 default_title
 
-PROMPT=$'$(return_status)$(base_prompt)$(display_path)$(display_git)$(command_runtime)\n$(virtualenv_info)> '
+PROMPT=$'$(return_status)$(base_prompt)$(display_path)$(display_git)$(command_runtime)\n$(shell_with_venv_info) '
 
 # Open new tabs in the same directory:
 source /etc/profile.d/vte.sh

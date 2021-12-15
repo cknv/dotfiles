@@ -79,8 +79,12 @@ function display_git() {
     fi
 }
 
-function virtualenv_info() {
-    [ $VIRTUAL_ENV ] && echo "%{$fg[yellow]%}[`basename $VIRTUAL_ENV`]%{$reset_color%} "
+function shell_with_venv_info() {
+    if [ $VIRTUAL_ENV ]; then
+        echo "%{$fg[yellow]%}|>%{$reset_color%}"
+    else
+        echo ">"
+    fi
 }
 
 function command_runtime() {
@@ -123,5 +127,20 @@ function default_title() {
 function chpwd() {
     if [ -r $PWD/.env ]; then
         source $PWD/.env
+    fi
+}
+
+function mkvenv() {
+    if [ "$1" != "" ]; then
+        $1 -m venv .venv
+    else
+        python -m venv .venv
+    fi
+    activate
+}
+
+function activate() {
+    if [ -r $PWD/.venv ]; then
+        source $PWD/.venv/bin/activate
     fi
 }
