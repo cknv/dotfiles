@@ -124,12 +124,6 @@ function default_title() {
     print -Pn '\e]2;%$path_length~\a'
 }
 
-function chpwd() {
-    if [ -r $PWD/.env ]; then
-        source $PWD/.env
-    fi
-}
-
 function mkvenv() {
     if [ "$1" != "" ]; then
         $1 -m venv .venv
