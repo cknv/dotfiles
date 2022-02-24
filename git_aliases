@@ -35,7 +35,8 @@
     cp = cherry-pick
     st = status
     unstage = rm --cached
-    br = branch --all -vv
+    br = branch -vv
+    brr = branch --remotes -vv
     l1 = log -n 1 --oneline --decorate=no
     lg = log --graph --pretty=medium --abbrev-commit --date=local
     lgb = log --graph --pretty=medium --abbrev-commit --date=local --branches --all
