@@ -131,10 +131,14 @@ function mkvenv() {
         python -m venv .venv
     fi
     activate
+    return 0
 }
 
 function activate() {
     if [ -r $PWD/.venv ]; then
         source $PWD/.venv/bin/activate
+        return 0
+    else
+        return 1
     fi
 }
