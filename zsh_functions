@@ -142,3 +142,12 @@ function activate() {
         return 1
     fi
 }
+
+function rmvenv() {
+    if [ -r $PWD/.venv ]; then
+        rm -r .venv
+        return 0
+    else
+        return 1
+    fi
+}
