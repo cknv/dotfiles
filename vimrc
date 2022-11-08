@@ -6,3 +6,5 @@ set backspace=indent,eol,start
 
 set tabstop=4
 set smartindent
+set textwidth=72
+set colorcolumn=73
