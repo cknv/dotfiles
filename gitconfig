@@ -76,3 +76,6 @@
 # Remember and reuse conflict resolutions:
 [rerere]
 	enabled = true
+
+[branch]
+	sort = -committerdate
