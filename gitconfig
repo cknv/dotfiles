@@ -72,3 +72,7 @@
 
 [blame]
 	ignoreRevsFile = .git-blame-ignore-revs
+
+# Remember and reuse conflict resolutions:
+[rerere]
+	enabled = true
