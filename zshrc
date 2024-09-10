@@ -23,6 +23,10 @@ setopt HIST_FIND_NO_DUPS
 # load found entry into buffer instead of running directly
 setopt HIST_VERIFY
 
+# load completion helper functions
+autoload -Uz compinit
+compinit
+
 # Python specifics.
 export PYTHONDONTWRITEBYTECODE=1
 export WORKON_HOME=$HOME/.virtualenvs
