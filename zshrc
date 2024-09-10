@@ -1,12 +1,27 @@
-# History control.
+# History configuration:
 HISTFILE=~/.hist
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=7500
+SAVEHIST=10000
 
-setopt APPEND_HISTORY
-setopt HIST_IGNORE_DUPS
+# Save timestamps with history entries
+setopt INC_APPEND_HISTORY_TIME
+setopt EXTENDED_HISTORY
+
+# remove duplicates when saving the history
 setopt HIST_EXPIRE_DUPS_FIRST
-# HISTIGNORE="ls:reread:short:long:pwd:git s:git diff:git l*"
+
+# ignore all entries starting with spaces
+setopt HIST_IGNORE_SPACE
+
+# just keep the most recent duplicate
+setopt HIST_SAVE_NO_DUPS
+
+#setopt SHARE_HISTORY
+# skip duplicates when searching
+setopt HIST_FIND_NO_DUPS
+
+# load found entry into buffer instead of running directly
+setopt HIST_VERIFY
 
 # Python specifics.
 export PYTHONDONTWRITEBYTECODE=1
