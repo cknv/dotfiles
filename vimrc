@@ -35,7 +35,8 @@ set textwidth=0
 " Special configuration for git commit messages:
 " - Insert linebreaks after 72 characters
 " - Enable spellcheck
-autocmd Filetype gitcommit set textwidth=72 nonumber spell
+" - Disable cursorline
+autocmd Filetype gitcommit set textwidth=72 nonumber nocursorline spell
 
 " Special configuration for markdown files:
 " - Disable line numbers
