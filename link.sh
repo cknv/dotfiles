@@ -16,6 +16,4 @@ ln -sf $PWD/carbon_keyboard $HOME/.carbon_keyboard
 
 ln -sf $PWD/shell_aliases $HOME/.shell_aliases
 
-ln -sf $PWD/pythonrc.py $HOME/.pythonrc.py
-
 ln -sf $PWD/editorconfig $HOME/.editorconfig

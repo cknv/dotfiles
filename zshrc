@@ -31,7 +31,6 @@ compinit
 export PYTHONDONTWRITEBYTECODE=1
 export WORKON_HOME=$HOME/.virtualenvs
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-export PYTHONSTARTUP=~/.pythonrc.py
 eval "`pip completion --zsh`"
 
 # Go specifics
