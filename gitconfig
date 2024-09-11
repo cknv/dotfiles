@@ -6,7 +6,7 @@
     path = ~/.git_work_config
 
 [core]
-    editor = vim
+    editor = nvim
     whitespace = trailing-space,cr-at-eol
     excludesfile = ~/.gitignore
 
