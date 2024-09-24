@@ -2,7 +2,7 @@
 set -x
 
 ln -sf $PWD/vimrc $HOME/.vimrc
-mkdir $HOME/.config/nvim
+mkdir --parents $HOME/.config/nvim
 ln -sf $PWD/nvim.init $HOME/.config/nvim/init.vim
 
 ln -sf $PWD/gitconfig $HOME/.gitconfig
