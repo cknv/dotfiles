@@ -105,7 +105,7 @@ function command_runtime() {
     if ((timer_remainder>0)); then
         display_time="${display_time}${timer_remainder}s"
     fi
-    echo "%{$fg_bold[black]%} ${display_time}%{$reset_color%}"
+    echo "%{$(tput setaf 8)%} ${display_time}%{$reset_color%}"
 }
 
 function preexec() {
