@@ -46,6 +46,9 @@
     conflictstyle = "diff3"
     trustExitCode = false
 
+[commit]
+    verbose = true
+
 [push]
     default = tracking
     followTags = true
