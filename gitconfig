@@ -90,11 +90,11 @@
     required = true
 
 [blame]
-	ignoreRevsFile = .git-blame-ignore-revs
+    ignoreRevsFile = .git-blame-ignore-revs
 
 # Remember and reuse conflict resolutions:
 [rerere]
-	enabled = true
+    enabled = true
 
 [branch]
-	sort = -committerdate
+    sort = -committerdate
