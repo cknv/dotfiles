@@ -57,6 +57,8 @@
 [fetch]
     recurseSubmodules = true
     prune = true
+    # Prune local tags is probably a fine idea, but not for my workflow:
+    # pruneTags = true
     all = true
 
 [log]
