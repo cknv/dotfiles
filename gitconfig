@@ -10,6 +10,9 @@
     whitespace = trailing-space,cr-at-eol
     excludesfile = ~/.gitignore
 
+[init]
+    defaultBranch = main
+
 [color]
     ui = auto
 [color "branch"]
