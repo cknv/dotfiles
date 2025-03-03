@@ -57,6 +57,7 @@
 [fetch]
     recurseSubmodules = true
     prune = true
+    all = true
 
 [log]
     decorate = short
