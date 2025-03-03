@@ -50,6 +50,7 @@
     verbose = true
 
 [push]
+    autoSetupRemote = true
     default = tracking
     followTags = true
 
