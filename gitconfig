@@ -59,7 +59,10 @@
     path = ~/.git_aliases
 
 [diff]
-    algorithm = patience
+    algorithm = histogram
+    colorMoved = plain
+    menmonicPrefix = true
+    renames = true
 
 [url "git@github.com:"]
     insteadOf = https://github.com/
